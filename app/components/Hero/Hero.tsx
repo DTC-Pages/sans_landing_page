@@ -17,13 +17,13 @@ export default function Hero() {
       
       <div className="text-[17px] md:text-[18px] leading-[26px] text-[#231F20]">
         <p className="mb-4">
-          Backed by growing research and everyday demand, they're quickly becoming a 
+          Backed by growing research and everyday demand, they&apos;re quickly becoming a 
           household essential for reducing airborne pollutants, allergens, and even 
           microscopic contaminants. But not all air purifiers are created equal—some 
-          have limited coverage, or fail to remove the most harmful particles. That's 
+          have limited coverage, or fail to remove the most harmful particles. That&apos;s 
           why we researched and reviewed the{' '}
           <b>Top 5 Air Purifiers of 2025
-          —so you don't have to.</b>
+          —so you don&apos;t have to.</b>
         </p>
       </div>
     </section>

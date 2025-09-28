@@ -51,8 +51,6 @@ export default function ProductDetailCard() {
           ))}
         </div>
       </div>
-
-      {/* Overall Section */}
       <div className="mt-8">
         <h4 className="text-[28px] md:text-[32px] font-bold text-[#231F20] mb-4 leading-[42px]">
           OVERALL
@@ -64,7 +62,7 @@ export default function ProductDetailCard() {
             best air quality and value for the price
           </b>
           , all while operating whisper-quietly. Add a 30-day home trial, free
-          returns, and a 5-year warranty, and it's clear why Sans is the
+          returns, and a 5-year warranty, and it&apos;s clear why Sans is the
           smartest choice for anyone serious about a cleaner, healthier home.
         </p>
 
