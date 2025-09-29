@@ -22,40 +22,33 @@ export default function WinnerSection() {
 
   return (
     <div className="bg-white max-w-4xl w-full">
-      {/* Header */}
       <h2 className="text-[38px] leading-[42px] font-bold text-[#231F20] mb-6">
         {title}
       </h2>
-
-      {/* Description */}
       <p className="text-[#231F20] text-[17px] md:text-[18px] leading-6.5 mb-6 md:mb-10">
         {description}
       </p>
 
-      {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 border-2 border-[#ededed] rounded-[22px] py-[31px] px-3 relative"  style={{ boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.08)" }}>
-        {/* Left Side - Image and Badge */}
+      <div
+        className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 border-2 border-[#ededed] rounded-[22px] py-[31px] px-3 relative"
+        style={{ boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.08)" }}
+      >
         <div className="flex flex-col items-center lg:items-start">
-          {/* #1 Choice Badge */}
           <div className="bg-[#231F20] text-white px-4 py-2 rounded-3xl font-bold absolute top-[-18px] w-[200px] text-center text-base leading-[26px]">
             #1 Choice
           </div>
-          {/* Product Image */}
           <div className="flex items-center justify-center">
             <Image
-              src="/air-purifier-card.png"
-              alt="The Health Report Logo"
+              src="/air-purifier-winner.png"
+              alt="Air purifier winner"
               width={300}
               height={400}
               priority
-              className="h-auto w-[252px] md:w-full md:h-auto"
+              className="h-auto w-[252px] md:w-full md:h-auto cursor-pointer"
+              onClick={handleShopNow}
             />
           </div>
-
-          {/* Stars and Reviews */}
         </div>
-
-        {/* Right Side - Content */}
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="text-yellow-400 text-base">★★★★★</div>
@@ -63,7 +56,10 @@ export default function WinnerSection() {
               +3,300 5-Star Reviews
             </span>
           </div>
-          <h3 className="text-[21px] md:text-[24px] font-[500] text-[#133E3B] mb-4">
+          <h3
+            className="text-[21px] md:text-[24px] font-[500] text-[#133E3B] mb-4 cursor-pointer"
+            onClick={handleShopNow}
+          >
             {productName}
           </h3>
 
@@ -90,7 +86,7 @@ export default function WinnerSection() {
           {/* CTA Button */}
           <button
             onClick={handleShopNow}
-            className="bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center"
+            className="bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
           >
             Shop The #1 Choice Now
             <span className="text-sm">
@@ -100,7 +96,6 @@ export default function WinnerSection() {
                 width={24}
                 height={23}
                 priority
-                className=""
               />
             </span>
           </button>

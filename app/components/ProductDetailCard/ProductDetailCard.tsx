@@ -14,7 +14,7 @@ export default function ProductDetailCard() {
         <span className="text-3xl md:text-4xl font-bold text-black leading-[42px]">
           1.
         </span>
-        <h3 className="text-3xl md:text-4xl font-bold text-black leading-[42px]">
+        <h3 className="text-3xl md:text-4xl font-bold text-black leading-[42px] cursor-pointer" onClick={handleShopNow}>
           {product.name}
         </h3>
       </div>
@@ -26,6 +26,8 @@ export default function ProductDetailCard() {
             alt="Sans Air Purifier"
             width={353}
             height={353}
+            className="cursor-pointer"
+            onClick={handleShopNow}
           />
         </div>
 
@@ -68,7 +70,7 @@ export default function ProductDetailCard() {
 
         <button
           onClick={handleShopNow}
-          className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px]"
+          className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
         >
           Shop The #1 Choice Now
           <span>

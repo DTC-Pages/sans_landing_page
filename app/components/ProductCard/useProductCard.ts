@@ -18,8 +18,7 @@ export const useProductCard = () => {
   });
 
   const handleShopNow = useCallback(() => {
-    // Redirección a sitio externo - sitio estático
-    window.open('https://example.com/shop', '_blank');
+    window.open('https://www.livesans.com/products/air-purifier', '_blank');
   }, []);
 
   const formatPrice = useCallback((price: number): string => {

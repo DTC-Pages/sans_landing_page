@@ -20,11 +20,12 @@ export default function ProductCard() {
             width={300}
             height={400}
             priority
-            className="h-[150px] w-[120px] md:w-full md:h-auto"
+            className="h-[150px] w-[120px] md:w-full md:h-auto cursor-pointer"
+            onClick={handleShopNow}
           />
         </div>
         <div className="">
-          <h3 className="text-xl md:text[28px] font-bold text-[#1F2A34] mb-1 leading-[24px] md:leading-[34px]">
+          <h3 className="text-xl md:text[28px] font-bold text-[#1F2A34] mb-1 leading-[24px] md:leading-[34px] cursor-pointer" onClick={handleShopNow}>
             {product.name}
           </h3>
 
