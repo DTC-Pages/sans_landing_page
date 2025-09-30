@@ -26,7 +26,7 @@ export default function WinnerSection() {
         {title}
       </h2>
       <p className="text-[#231F20] text-[17px] md:text-[18px] leading-6.5 mb-6 md:mb-10">
-        {description}
+        {renderFeatureText(description)}
       </p>
 
       <div
@@ -34,7 +34,7 @@ export default function WinnerSection() {
         style={{ boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.08)" }}
       >
         <div className="flex flex-col items-center lg:items-start">
-          <div className="bg-[#231F20] text-white px-4 py-2 rounded-3xl font-bold absolute top-[-18px] w-[200px] text-center text-base leading-[26px]">
+          <div className="bg-[#133E3B] text-white px-4 py-2 rounded-3xl font-bold absolute top-[-18px] w-[200px] text-center text-base leading-[26px]">
             #1 Choice
           </div>
           <div className="flex items-center justify-center">
@@ -66,8 +66,8 @@ export default function WinnerSection() {
           {/* Features List */}
           <div className="mb-6 flex flex-col gap-[11px]">
             {features.map((feature: string, index: number) => (
-              <div key={index} className="flex items-center gap-2.5">
-                <div className="rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0">
+              <div key={index} className="flex items-baseline md:items-center gap-2.5">
+                <div className="rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 relative top-[0.45rem] md:top-0">
                   <Image
                     src="/check-v2.svg"
                     alt="Check"
@@ -76,7 +76,7 @@ export default function WinnerSection() {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <span className="text-gray-700 text-sm">
+                <span className="text-black text-sm">
                   {renderFeatureText(feature)}
                 </span>
               </div>

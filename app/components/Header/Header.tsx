@@ -13,10 +13,10 @@ export default function Header() {
         <Image
           src="/main-logo.svg"
           alt="The Health Report Logo"
-          width={286}
-          height={82}
+          width={315}
+          height={90}
           priority
-          className="max-w-full w-[171px] h-[49px] md:w-[286px] md:h-[82px]"
+          className="max-w-full"
         />
       </div>
     </header>

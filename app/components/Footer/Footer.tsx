@@ -14,8 +14,8 @@ export default function Footer() {
           <Image
             src="/main-logo.svg"
             alt="The Health Report Logo"
-            width={286}
-            height={82}
+            width={315}
+            height={90}
             priority
             className="h-auto w-auto max-w-full"
           />

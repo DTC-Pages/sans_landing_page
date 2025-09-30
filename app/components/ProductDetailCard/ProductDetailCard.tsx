@@ -35,9 +35,9 @@ export default function ProductDetailCard() {
           {features.map((feature: string, index: number) => (
             <div
               key={index}
-              className="flex items-center gap-2 py-3 px-4 bg-green-50 rounded-[12px]"
+              className="flex items-baseline md:items-center gap-2 py-3 px-4 bg-green-50 rounded-[12px]"
             >
-              <div className="w-[25px] h-[25px] md:w-7.5 md:h-7.5 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+              <div className="w-[25px] h-[25px] md:w-7.5 md:h-7.5 text-sm flex-shrink-0 relative top-[0.45rem] md:top-0">
                 <Image
                   src="/check-v2.svg"
                   alt="Check"
@@ -70,7 +70,7 @@ export default function ProductDetailCard() {
 
         <button
           onClick={handleShopNow}
-          className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
+          className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-semibold py-3 px-3 md:px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
         >
           Shop The #1 Choice Now
           <span>

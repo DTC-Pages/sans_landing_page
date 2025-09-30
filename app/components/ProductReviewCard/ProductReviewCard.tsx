@@ -135,8 +135,8 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
           <h5 className="text-[26px] font-bold text-[#444444] mb-4.5">CONS</h5>
           <div className="flex flex-col gap-4 md:gap-6">
             {product.cons.map((con, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+              <div key={index} className="flex items-baseline md:items-center gap-3">
+                <div className="rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 relative top-[0.75rem] md:top-0">
                   <Image
                     src="/fail.svg"
                     alt="Check"

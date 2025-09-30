@@ -5,7 +5,7 @@ import { useState, useCallback, useEffect } from 'react';
 export const useWinnerSection = () => {
   const [title, setTitle] = useState('The Clear Winner for Cleaner Air');
   const [description, setDescription] = useState(
-    'Sans Air Purifier takes the top spot with an outstanding 99.9% purification efficiency and the ideal balance of performance and value. It delivers wide coverage—up to 1,854 sq. ft., nearly double many competitors—all about half the price, all while running whisper-quiet. With a 30-day home trial, free returns, and a 5-year warranty, Sans stands out as the smartest choice.'
+    '**Sans Air Purifier takes the top spot with an outstanding 99.9% purification efficiency and the ideal balance of performance and value.** It delivers wide coverage—up to 1,854 sq. ft., nearly double many competitors—all about half the price, all while running whisper-quiet. With a 30-day home trial, free returns, and a 5-year warranty, Sans stands out as the smartest choice.'
   );
   const [productName, setProductName] = useState('Sans Air Purifier');
   const [features, setFeatures] = useState<string[]>([]);

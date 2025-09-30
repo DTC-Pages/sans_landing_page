@@ -30,7 +30,7 @@ export default function ProductCard() {
           </h3>
 
           <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="text-yellow-400 text-base">★★★★★</div>
+            <div className="text-yellow-400 text-[13px]">★★★★★</div>
             <span className="text-[#1F2A34] text-xs leading-[19px]">
               {product.reviews} Reviews
             </span>
