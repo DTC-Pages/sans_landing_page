@@ -50,7 +50,7 @@ export default function WinnerSection() {
           </div>
         </div>
         <div>
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-1">
             <div className="text-yellow-400 text-base">★★★★★</div>
             <span className="text-[#1F2A34] text-[12px] leading-[19px]">
               +3,300 5-Star Reviews
@@ -76,7 +76,7 @@ export default function WinnerSection() {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <span className="text-black text-sm">
+                <span className="text-black text-[14.5px] leading-[25px]">
                   {renderFeatureText(feature)}
                 </span>
               </div>

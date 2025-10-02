@@ -12,7 +12,7 @@ export default function ProductCard() {
         #1 choice
       </div>
 
-      <div className="pt-[15px] px-3 pb-4 md:pb-[15px] text-center grid grid-cols-2 md:grid-cols-1 place-content-center gap-4">
+      <div className="pt-[15px] px-3 pb-4 md:pb-[15px] text-center grid grid-cols-[auto_1fr] md:grid-cols-1 place-content-center gap-4">
         <div className="flex justify-center">
           <Image
             src="/air-purifier-card.png"
@@ -25,7 +25,7 @@ export default function ProductCard() {
           />
         </div>
         <div className="">
-          <h3 className="text-xl md:text[28px] font-bold text-[#1F2A34] mb-1 leading-[24px] md:leading-[34px] cursor-pointer" onClick={handleShopNow}>
+          <h3 className="text-xl md:text-[28px] font-bold text-[#1F2A34] mb-1 leading-[24px] md:leading-[34px] cursor-pointer" onClick={handleShopNow}>
             {product.name}
           </h3>
 

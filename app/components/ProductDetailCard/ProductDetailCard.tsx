@@ -35,9 +35,9 @@ export default function ProductDetailCard() {
           {features.map((feature: string, index: number) => (
             <div
               key={index}
-              className="flex items-baseline md:items-center gap-2 py-3 px-4 bg-green-50 rounded-[12px]"
+              className="flex items-center gap-2 py-3 px-4 bg-green-50 rounded-[12px]"
             >
-              <div className="w-[25px] h-[25px] md:w-7.5 md:h-7.5 text-sm flex-shrink-0 relative top-[0.45rem] md:top-0">
+              <div className="w-[25px] h-[25px] md:w-7.5 md:h-7.5 text-sm flex-shrink-0">
                 <Image
                   src="/check-v2.svg"
                   alt="Check"

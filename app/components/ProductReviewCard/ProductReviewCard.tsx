@@ -45,7 +45,7 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
 
       {/* Desktop Layout */}
       <div className="hidden lg:block mb-6">
-        <div className="grid grid-cols-[200px_1fr] gap-6">
+        <div className="grid grid-cols-[200px_1fr] gap-6 place-items-center">
           {/* Left Side - Image */}
           <div className="flex justify-start">
             <div className="w-48 h-64 rounded-lg flex items-center justify-center">
@@ -104,10 +104,10 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
       </div>
 
       {/* Pros and Cons Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 md:px-[30px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 md:px-[30px] border-r border-[#f0f0f0]">
         {/* Pros */}
         <div>
-          <h5 className="text-[26px] font-bold text-[#444444] mb-4.5 leading-[32.5px]">
+          <h5 className="text-[26px] font-bold text-[#444444] mb-4 leading-[32.5px]">
             PROS
           </h5>
           <div className="flex flex-col gap-4 md:gap-6">
@@ -122,7 +122,7 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <span className="text-[#444444] text-base leading-normal md:leading-8">
+                <span className="text-[#444444] text-base leading-[22.4px] md:leading-6">
                   {pro.text}
                 </span>
               </div>
@@ -132,11 +132,11 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
 
         {/* Cons */}
         <div>
-          <h5 className="text-[26px] font-bold text-[#444444] mb-4.5">CONS</h5>
+          <h5 className="text-[26px] font-bold text-[#444444] mb-4 leading-[32.5px]">CONS</h5>
           <div className="flex flex-col gap-4 md:gap-6">
             {product.cons.map((con, index) => (
-              <div key={index} className="flex items-baseline md:items-center gap-3">
-                <div className="rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 relative top-[0.75rem] md:top-0">
+              <div key={index} className="flex items-center gap-3">
+                <div className="rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                   <Image
                     src="/fail.svg"
                     alt="Check"
@@ -145,7 +145,7 @@ export default function ProductReviewCard({ product }: ProductReviewCardProps) {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <span className="text-[#444444] text-base leading-normal md:leading-8">
+                <span className="text-[#444444] text-base leading-[22.4px] md:leading-6">
                   {con.text}
                 </span>
               </div>
