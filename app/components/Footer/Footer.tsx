@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useFooter } from './useFooter';
+import Image from "next/image";
+import { useFooter } from "./useFooter";
 
 export default function Footer() {
   const { disclaimer, copyright } = useFooter();
@@ -12,12 +12,12 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center md:justify-start mb-6">
           <Image
-            src="/main-logo.svg"
+            src="/main-logo.png"
             alt="The Health Report Logo"
             width={315}
             height={90}
             priority
-            className="h-auto w-auto max-w-full"
+            className="max-w-full w-[315px] h-[90px]"
           />
         </div>
 
@@ -33,9 +33,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-[#BDBDBD] text-sm leading-[21px]">
-            {copyright}
-          </p>
+          <p className="text-[#BDBDBD] text-sm leading-[21px]">{copyright}</p>
         </div>
       </div>
     </footer>
