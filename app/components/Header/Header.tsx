@@ -16,7 +16,7 @@ export default function Header() {
           width={315}
           height={90}
           priority
-          className="w-full"
+          className="max-w-full w-[315px] h-[90px]"
         />
       </div>
     </header>
