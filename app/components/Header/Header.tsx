@@ -13,8 +13,8 @@ export default function Header() {
         <Image
           src="/main-logo.png"
           alt="The Health Report Logo"
-          width={315}
-          height={90}
+          width={1260}
+          height={360}
           priority
           className="max-w-full w-[315px] h-[90px]"
         />

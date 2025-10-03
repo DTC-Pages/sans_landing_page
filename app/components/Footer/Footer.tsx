@@ -7,15 +7,15 @@ export default function Footer() {
   const { disclaimer, copyright } = useFooter();
 
   return (
-    <footer className="w-full bg-gray-100 py-12 md:py-14 px-4 md:px-[65px]">
+    <footer className="w-full bg-[#F6F6F6] py-12 md:py-14 px-4 md:px-[65px]">
       <div className="max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex justify-center md:justify-start mb-6">
           <Image
             src="/main-logo.png"
             alt="The Health Report Logo"
-            width={315}
-            height={90}
+            width={1260}
+            height={360}
             priority
             className="max-w-full w-[315px] h-[90px]"
           />
