@@ -11,12 +11,12 @@ export default function Header() {
       
       <div className="flex justify-center items-center p-2.5 md:p-2">
         <Image
-          src="/main-logo.svg"
+          src="/main-logo.png"
           alt="The Health Report Logo"
           width={315}
           height={90}
           priority
-          className="max-w-full"
+          className="w-full"
         />
       </div>
     </header>
