@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useFooter } from "./useFooter";
+
+const FOOTER_DATA = {
+  disclaimer: 'This article is an advertorial for Sans and is intended solely for informational purposes. The Health Report is owned and operated by Sans.',
+  copyright: '© 2025 Sans. All rights reserved.'
+} as const;
 
 export default function Footer() {
-  const { disclaimer, copyright } = useFooter();
 
   return (
     <footer className="w-full bg-[#F6F6F6] py-12 md:py-14 px-4 md:px-[65px]">
@@ -24,7 +27,7 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="text-center md:text-left mb-8">
           <p className="text-[#B0ADAD] text-sm leading-6 max-w-4xl">
-            {disclaimer}
+            {FOOTER_DATA.disclaimer}
           </p>
         </div>
 
@@ -33,7 +36,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-[#BDBDBD] text-sm leading-[21px]">{copyright}</p>
+          <p className="text-[#BDBDBD] text-sm leading-[21px]">{FOOTER_DATA.copyright}</p>
         </div>
       </div>
     </footer>
