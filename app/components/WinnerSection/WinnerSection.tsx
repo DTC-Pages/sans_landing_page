@@ -78,8 +78,6 @@ export default function WinnerSection() {
           >
             {WINNER_SECTION_DATA.productName}
           </h3>
-
-          {/* Features List */}
           <div className="mb-6 flex flex-col gap-[11px]">
             {WINNER_FEATURES.map((feature: string, index: number) => (
               <div key={index} className="flex items-baseline md:items-center gap-2.5">
@@ -99,10 +97,9 @@ export default function WinnerSection() {
             ))}
           </div>
 
-          {/* CTA Button */}
           <button
             onClick={handleShopNow}
-            className="bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
+            className="bg-[#04D1C3] hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
           >
             {WINNER_SECTION_DATA.ctaButtonText}
             <span className="text-sm">

@@ -1,15 +1,33 @@
 "use client";
 
-import { useProductCard } from "./useProductCard";
 import Image from "next/image";
 
+const PRODUCT_DATA = {
+  name: 'Sans Air Purifier',
+  reviews: '3,419',
+  originalPrice: 469.99,
+  currentPrice: 369.99
+} as const;
+
+const PRODUCT_CARD_TEXT = {
+  badge: '#1 choice',
+  buttonText: 'Shop Now'
+} as const;
+
+const handleShopNow = () => {
+  window.open('https://www.livesans.com/products/air-purifier', '_blank');
+};
+
+const formatPrice = (price: number): string => {
+  return price.toFixed(2);
+};
+
 export default function ProductCard() {
-  const { product, handleShopNow, formatPrice } = useProductCard();
 
   return (
     <div className="bg-gray-50 rounded-xl overflow-hidden w-full">
       <div className="bg-[#133E3B] text-white text-center pt-3 pb-3.5 text-[20px] font-bold leading-[19.2px] tracking-[0.6px]">
-        #1 choice
+        {PRODUCT_CARD_TEXT.badge}
       </div>
 
       <div className="pt-[15px] px-3 pb-4 md:pb-[15px] text-center grid grid-cols-[auto_1fr] md:grid-cols-1 place-content-center gap-4">
@@ -26,22 +44,22 @@ export default function ProductCard() {
         </div>
         <div className="">
           <h3 className="text-xl md:text-[28px] font-bold text-[#1F2A34] mb-1 leading-[24px] md:leading-[34px] cursor-pointer" onClick={handleShopNow}>
-            {product.name}
+            {PRODUCT_DATA.name}
           </h3>
 
           <div className="flex items-center justify-center gap-2 mb-2">
             <div className="text-yellow-400 text-[13px]">★★★★★</div>
             <span className="text-[#1F2A34] text-xs leading-[19px]">
-              {product.reviews} Reviews
+              {PRODUCT_DATA.reviews} Reviews
             </span>
           </div>
 
           <div className="mb-4">
             <span className="text-[#727981] line-through text-sm mr-2 leading-[22.4px]">
-              ${formatPrice(product.originalPrice)}
+              ${formatPrice(PRODUCT_DATA.originalPrice)}
             </span>
             <span className="text-[#1F2A34] text-sm leading-[22.4px]">
-              ${formatPrice(product.currentPrice)}
+              ${formatPrice(PRODUCT_DATA.currentPrice)}
             </span>
           </div>
 
@@ -49,7 +67,7 @@ export default function ProductCard() {
             onClick={handleShopNow}
             className="w-full bg-[#04D1C3] hover:bg-teal-500 text-white font-semibold py-3 px-6 rounded-[32px] transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center justify-center gap-2 md:text-[18px]"
           >
-            Shop Now
+            {PRODUCT_CARD_TEXT.buttonText}
             <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">
               <Image
                 src="/arrow-icon.svg"

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+const FEATURES_TITLE = 'What to Look For in an Air Purifier';
 const FEATURES = [
   'High Filtration Efficiency',
   'Third-Party Tested',
@@ -15,7 +15,7 @@ export default function Features() {
   return (
     <div className="bg-white border border-[#231F20] rounded-[10px] p-6 max-w-4xl w-full my-9">
       <h3 className="text-[20px] md:text-[26px] font-bold text-[#231F20] mb-6 leading-[30px]">
-        What to Look For in an Air Purifier
+        {FEATURES_TITLE}
       </h3>
 
       <div className="flex flex-col gap-6 justify-start items-start">

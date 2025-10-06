@@ -88,7 +88,7 @@ export default function ProductDetailCard() {
 
         <button
           onClick={handleShopNow}
-          className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-semibold py-3 px-3 md:px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
+          className="flex items-center justify-center gap-4 bg-[#04D1C3] hover:bg-teal-500 text-white font-semibold py-3 px-3 md:px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
         >
           {OVERALL_SECTION.buttonText}
           <span>

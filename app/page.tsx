@@ -14,7 +14,6 @@ export default function Home() {
       <Header />
       
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-9 lg:py-12">
-        {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-[1fr_320px] lg:gap-10 lg:items-start">
           <div className="flex flex-col">
             <Hero />
@@ -29,8 +28,6 @@ export default function Home() {
             <ProductCard />
           </div>
         </div>
-        
-        {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col">
           <Hero />
           <ProductCard />
