@@ -99,13 +99,13 @@ export default function WinnerSection() {
 
           <button
             onClick={handleShopNow}
-            className="bg-[#04D1C3] hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
+            className="bg-[#04D1C3] hover:bg-teal-500 text-lg text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
           >
             {WINNER_SECTION_DATA.ctaButtonText}
             <span className="text-sm">
               <Image
                 src="/arrow-icon.svg"
-                alt="The Health Report Logo"
+                alt="Arrow"
                 width={24}
                 height={23}
                 priority
