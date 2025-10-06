@@ -1,9 +1,33 @@
 "use client";
 
-import { useProductDetailCard } from "./useProductDetailCard";
 import Image from "next/image";
+
+const PRODUCT_DATA = {
+  name: 'Sans Air Purifier'
+} as const;
+
+const PRODUCT_FEATURES = [
+  'Powerful 3-Stage Filtration For Up To 99.9% Effectiveness',
+  'Third-Party Tested',
+  'Backed By A 30-Day Home Trial & 5-Year Warranty',
+  'Powerful Purification Without The Premium Price',
+  'Whisper-Quiet Operation You\'ll Barely Notice'
+] as const;
+
+const OVERALL_SECTION = {
+  title: 'OVERALL',
+  description: {
+    highlightedText: 'Sans Air Purifier takes the top spot with an impressive 99.9% purification efficiency, independently certified, delivering the best air quality and value for the price',
+    regularText: ', all while operating whisper-quietly. Add a 30-day home trial, free returns, and a 5-year warranty, and it\'s clear why Sans is the smartest choice for anyone serious about a cleaner, healthier home.'
+  },
+  buttonText: 'Shop The #1 Choice Now'
+} as const;
+
+const handleShopNow = () => {
+  window.open('https://www.livesans.com/products/air-purifier', '_blank');
+};
+
 export default function ProductDetailCard() {
-  const { product, features, handleShopNow } = useProductDetailCard();
 
   return (
     <div
@@ -15,7 +39,7 @@ export default function ProductDetailCard() {
           1.
         </span>
         <h3 className="text-3xl md:text-4xl font-bold text-black leading-[42px] cursor-pointer" onClick={handleShopNow}>
-          {product.name}
+          {PRODUCT_DATA.name}
         </h3>
       </div>
 
@@ -32,7 +56,7 @@ export default function ProductDetailCard() {
         </div>
 
         <div className="space-y-4">
-          {features.map((feature: string, index: number) => (
+          {PRODUCT_FEATURES.map((feature: string, index: number) => (
             <div
               key={index}
               className="flex items-center gap-2 py-3 px-4 bg-green-50 rounded-[12px]"
@@ -55,24 +79,18 @@ export default function ProductDetailCard() {
       </div>
       <div className="mt-8">
         <h4 className="text-[28px] md:text-[32px] font-bold text-[#231F20] mb-4 leading-[42px]">
-          OVERALL
+          {OVERALL_SECTION.title}
         </h4>
         <p className="text-[#231F20] leading-[26px] mb-6 text-[17px] md:text-[18px]">
-          <b>
-            Sans Air Purifier takes the top spot with an impressive 99.9%
-            purification efficiency, independently certified, delivering the
-            best air quality and value for the price
-          </b>
-          , all while operating whisper-quietly. Add a 30-day home trial, free
-          returns, and a 5-year warranty, and it&apos;s clear why Sans is the
-          smartest choice for anyone serious about a cleaner, healthier home.
+          <b>{OVERALL_SECTION.description.highlightedText}</b>
+          {OVERALL_SECTION.description.regularText}
         </p>
 
         <button
           onClick={handleShopNow}
           className="flex items-center justify-center gap-4 bg-teal-400 hover:bg-teal-500 text-white font-semibold py-3 px-3 md:px-8 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 m-auto w-full md:w-[340px] text-[18px] cursor-pointer"
         >
-          Shop The #1 Choice Now
+          {OVERALL_SECTION.buttonText}
           <span>
             <Image
               src="/arrow-icon.svg"

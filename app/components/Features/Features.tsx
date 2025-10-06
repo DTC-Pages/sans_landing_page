@@ -1,9 +1,16 @@
 "use client";
 
-import { useFeatures } from "./useFeatures";
 import Image from "next/image";
+
+const FEATURES = [
+  'High Filtration Efficiency',
+  'Third-Party Tested',
+  'Reliable Warranty',
+  'Strong Purification At A Fair Price',
+  'Quiet Operation'
+] as const;
+
 export default function Features() {
-  const { features } = useFeatures();
 
   return (
     <div className="bg-white border border-[#231F20] rounded-[10px] p-6 max-w-4xl w-full my-9">
@@ -12,7 +19,7 @@ export default function Features() {
       </h3>
 
       <div className="flex flex-col gap-6 justify-start items-start">
-        {features.map((feature: string, index: number) => (
+        {FEATURES.map((feature: string, index: number) => (
           <div
             key={index}
             className="flex items-center justify-start gap-3 transition-all duration-300 hover:translate-x-1 bg-[#EEFCFB] rounded-[32px] p-2"

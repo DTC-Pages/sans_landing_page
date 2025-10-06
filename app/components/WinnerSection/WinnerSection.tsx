@@ -1,10 +1,26 @@
 "use client";
 
-import { useWinnerSection } from "./useWinnerSection";
 import Image from "next/image";
+
+const WINNER_SECTION_DATA = {
+  title: 'The Clear Winner for Cleaner Air',
+  description: '**Sans Air Purifier takes the top spot with an outstanding 99.9% purification efficiency and the ideal balance of performance and value.** It delivers wide coverage—up to 1,854 sq. ft., nearly double many competitors—all about half the price, all while running whisper-quiet. With a 30-day home trial, free returns, and a 5-year warranty, Sans stands out as the smartest choice.',
+  productName: 'Sans Air Purifier',
+  ctaButtonText: 'Shop The #1 Choice Now'
+} as const;
+
+const WINNER_FEATURES = [
+  'Removes up to **99.9% of pollutants** for cleaner, healthier air',
+  'Captures **dust, pet hair, dander, allergens, VOCs, and more**',
+  'Provides **fast allergy relief** and supports easier breathing',
+  '**Neutralizes odors** to keep your home smelling fresh'
+] as const;
+
+const handleShopNow = () => {
+  window.open('https://www.livesans.com/products/air-purifier', '_blank');
+};
+
 export default function WinnerSection() {
-  const { title, description, productName, features, handleShopNow } =
-    useWinnerSection();
 
   const renderFeatureText = (feature: string) => {
     const parts = feature.split(/(\*\*.*?\*\*)/);
@@ -23,10 +39,10 @@ export default function WinnerSection() {
   return (
     <div className="bg-white max-w-4xl w-full">
       <h2 className="text-[38px] leading-[42px] font-bold text-[#231F20] mb-6">
-        {title}
+        {WINNER_SECTION_DATA.title}
       </h2>
       <p className="text-[#231F20] text-[17px] md:text-[18px] leading-6.5 mb-6 md:mb-10">
-        {renderFeatureText(description)}
+        {renderFeatureText(WINNER_SECTION_DATA.description)}
       </p>
 
       <div
@@ -60,12 +76,12 @@ export default function WinnerSection() {
             className="text-[21px] md:text-[24px] font-[500] text-[#133E3B] mb-4 cursor-pointer"
             onClick={handleShopNow}
           >
-            {productName}
+            {WINNER_SECTION_DATA.productName}
           </h3>
 
           {/* Features List */}
           <div className="mb-6 flex flex-col gap-[11px]">
-            {features.map((feature: string, index: number) => (
+            {WINNER_FEATURES.map((feature: string, index: number) => (
               <div key={index} className="flex items-baseline md:items-center gap-2.5">
                 <div className="rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 relative top-[0.45rem] md:top-0">
                   <Image
@@ -88,7 +104,7 @@ export default function WinnerSection() {
             onClick={handleShopNow}
             className="bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:transform hover:-translate-y-0.5 flex items-center gap-2 w-full md:w-[340px] justify-center cursor-pointer"
           >
-            Shop The #1 Choice Now
+            {WINNER_SECTION_DATA.ctaButtonText}
             <span className="text-sm">
               <Image
                 src="/arrow-icon.svg"
